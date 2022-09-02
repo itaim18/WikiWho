@@ -1,0 +1,23 @@
+.menu{
+    
+    position: fixed;
+    text-align: center;
+    background: rgb(3, 68, 133);
+    width: 20%;
+    border-radius: 5%;
+    color: antiquewhite;
+    
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fffefe;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
