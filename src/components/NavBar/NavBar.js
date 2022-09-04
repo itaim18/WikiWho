@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.css";
-import DropdownHome from "../UI/DropdownHome";
 import RouteMenu from "../routeMenu/RouteMenu";
 import { Link } from "react-router-dom";
+import SubMenu from "../subMenu/SubMenu";
+const hubsTitles = ["Fun Fact", "Comics", "Comic Relief"];
+const epsTitles = ["Classic Era", "Modern Era", "Specials and Movies"];
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const pickedOptionHandler = () => {
@@ -13,8 +15,9 @@ const NavBar = () => {
       return !prevState;
     });
   };
+
   return (
-    <>
+    <div className={styles.stick}>
       <header className={styles.header}>
         <Link to="/home" style={{ textDecoration: "none" }}>
           <div className={styles.logo}>
@@ -33,6 +36,7 @@ const NavBar = () => {
           </div>
         </nav>
       </header>
+
       {showMenu && (
         <nav className={styles.menuNav}>
           <RouteMenu
@@ -41,7 +45,7 @@ const NavBar = () => {
           />
         </nav>
       )}
-    </>
+    </div>
   );
 };
 

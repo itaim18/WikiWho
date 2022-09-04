@@ -2,3 +2,72 @@
     top: 5px;
      position: relative; 
 }
+.subMenu{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 2.5%;
+}
+.subMenu ul {
+    list-style-type:none;
+   right: 2.5%; 
+   position: relative;
+}
+.subMenu a{
+    font-size:larger;
+   
+}
+.arrow{
+    width: 0; 
+  height: 0; 
+  bottom: 0;
+  position: absolute ;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  display:none;
+  border-bottom: 24px solid 
+  #88dfdf;
+}
+.hubsMenu{
+    position: absolute;
+    top: 70px;
+    flex-direction: column;
+    background: #ffffffa2;
+    color: #72ffff;
+    align-items: center;
+    /* border-top: 30px solid black; */
+}
+.hubsMenu li{
+    display: none;
+    margin: 20px 5px;
+}
+ a:hover{
+    color: #69e9e9a2;
+}
+ul li:hover .subMenu{
+    display: block;
+}
+@media only screen and (min-width: 770px) {
+    ul li:hover .subMenu{
+        display: none;
+    }
+    a:hover .arrow{
+        display: block;
+    }
+    a:hover .hubsMenu li{
+    display: block;
+    color:#00ffffa2;
+}
+a ul:hover .arrow{
+    display: block;
+}
+a ul:hover .hubsMenu li{
+    display: block;
+    color:#00ffffa2;
+}
+
+}
+/* a:hover +  .subMenu{
+display: block;
+} */
