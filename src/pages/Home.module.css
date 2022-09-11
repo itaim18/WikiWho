@@ -1,0 +1,24 @@
+@import url("http://fonts.cdnfonts.com/css/gotham");
+.homepage {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gotham Black", sans-serif;
+}
+.who {
+  background-image: linear-gradient(60deg, #f9d104, #ffb03a);
+  background-clip: text;
+  color: transparent;
+  display: inline;
+  text-shadow: 0 1px 0 #faf135, 0 2px 0 #ffc04b, 0 3px 0 #f9e125,
+    0 4px 0 #ffb03a, 0 5px 0, #f9d104 0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+.text {
+  font-size: smaller;
+  display: inline;
+  color: rgb(189, 151, 104);
+}

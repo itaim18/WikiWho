@@ -4,10 +4,12 @@ import FunFact from "./pages/FunFact";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import { Route, Switch, Redirect } from "react-router-dom";
+
 function App() {
   return (
     <>
       <NavBar />
+
       <Switch>
         <Route path="/" exact>
           <Redirect to="/home" />

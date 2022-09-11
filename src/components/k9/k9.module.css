@@ -1,0 +1,30 @@
+.iconBox {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.pageIcon {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  transition: all 2s ease-in;
+}
+.iconBox:hover .pageIcon {
+  animation: runDog 2s ease-in;
+}
+
+@keyframes runDog {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 200vh;
+  }
+  100% {
+    right: 0;
+  }
+}
