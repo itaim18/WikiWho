@@ -1,0 +1,9 @@
+.item button {
+  width: 200px;
+  height: 175px;
+  border-radius: 10px;
+  background: url("../../assets/images/tardis.png") no-repeat scroll 0 0
+    transparent;
+  color: azure;
+  margin-bottom: 50px;
+}

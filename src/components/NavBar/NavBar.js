@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styles from "./NavBar.module.css";
 import RouteMenu from "../routeMenu/RouteMenu";
 import { Link } from "react-router-dom";
-import SubMenu from "../subMenu/SubMenu";
-const hubsTitles = ["Fun Fact", "Comics", "Comic Relief"];
-const epsTitles = ["Classic Era", "Modern Era", "Specials and Movies"];
+
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const pickedOptionHandler = () => {

@@ -1,17 +1,18 @@
 import React from "react";
 import styles from "./WhoDataList.module.css";
+import WhoDataItem from "./WhoDataItem";
+const dataItems = [
+  { id: "d1", name: "doctor 1" },
+  { id: "d2", name: "doctor 2" },
+  { id: "d3", name: "doctor 3" },
+  { id: "d4", name: "doctor 4" },
+];
 const WhoDataList = () => {
   return (
     <ul className={styles.itemsList}>
-      <li>
-        <button>d1</button>
-      </li>
-      <li>
-        <button>d2</button>
-      </li>
-      <li>
-        <button>d3</button>
-      </li>
+      {dataItems.map((item) => (
+        <WhoDataItem item={item} key={item.id} />
+      ))}
     </ul>
   );
 };

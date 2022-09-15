@@ -8,22 +8,24 @@ const FunFactItem = (props) => {
       <h1>FUN FACT:</h1>
       <h2>{fact.title}</h2>
       <table>
-        <tr>
-          <td>
-            {fact.text ? (
-              <p className={styles.factText}>
-                <FaQuoteLeft />
-                {fact.text}
-                <FaQuoteRight />
-              </p>
-            ) : null}
-          </td>
-          <td>
-            <div>
-              <img src={fact.image} alt="tardis" className={styles.image} />
-            </div>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              {fact.text ? (
+                <p className={styles.factText}>
+                  <FaQuoteLeft />
+                  {fact.text}
+                  <FaQuoteRight />
+                </p>
+              ) : null}
+            </td>
+            <td>
+              <div>
+                <img src={fact.image} alt="tardis" className={styles.image} />
+              </div>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );

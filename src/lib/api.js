@@ -1,4 +1,6 @@
 const FACTS_API_DOMAIN = "https://retoolapi.dev/tpsndH/doctorwhofacts/";
+const DATES_EVENTS_DOMAIN = "https://retoolapi.dev/Lzxs0A/dates?date=";
+const date = require("../date.js");
 
 const options = {
   method: "GET",
@@ -36,4 +38,15 @@ export const getRandomFact = async () => {
     text: data.text,
   };
   return fact;
+};
+const renderDate = date.getDate();
+export const getDateEvent = async () => {
+  console.log(renderDate);
+  const dateResponse = await fetch(DATES_EVENTS_DOMAIN + renderDate);
+  const data = await dateResponse.json();
+  if (!dateResponse.ok) {
+    throw new Error(data.message || "Could not fetch date.");
+  }
+
+  return data;
 };

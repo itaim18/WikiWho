@@ -2,4 +2,7 @@
   position: relative;
   z-index: -1;
   width: 50%;
+  list-style-type: none;
+  column-count: 2;
+  column-gap: 100%;
 }

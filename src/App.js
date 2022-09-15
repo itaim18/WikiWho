@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <NavBar />
-
       <Switch>
         <Route path="/" exact>
           <Redirect to="/home" />
@@ -26,7 +25,15 @@ function App() {
         <Route path="/*">
           <NotFound />
         </Route>
-      </Switch>
+      </Switch>{" "}
+      <canvas
+        style={{
+          position: "fixed",
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
+        }}
+      ></canvas>
     </>
   );
 }

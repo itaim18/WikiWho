@@ -14,12 +14,24 @@ const K9 = () => {
       setSrc("images/k9-dog.png");
     }, 150);
   };
-  const linkToVid = () => {
-    new Audio(audio).play();
-    window.open(
-      "https://www.youtube.com/watch?v=HWZoNe-oKJw&t=10s&ab_channel=PipMadeley",
-      "_blank"
-    );
+  const linkToVid = (event) => {
+    switch (event.detail) {
+      case 1: {
+        new Audio(audio).play();
+        break;
+      }
+
+      case 2: {
+        window.open(
+          "https://www.youtube.com/watch?v=HWZoNe-oKJw&t=10s&ab_channel=PipMadeley",
+          "_blank"
+        );
+        break;
+      }
+      default: {
+        break;
+      }
+    }
   };
 
   return (
