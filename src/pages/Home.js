@@ -54,7 +54,13 @@ const Home = () => {
         </Row>
         <Row>
           <Intro>
-            <h3 style={{ color: "#2d7f9b", marginLeft: "15px" }}>
+            <h3
+              style={{
+                color: "#2d7f9b",
+                marginLeft: "15px",
+                textShadow: "#000 1px 1px 0, 1px 1px 1px rgba(26,11,7,0.26)",
+              }}
+            >
               I made several fullstack and frontend Projects and I wanted to
               make my first MPA(Multi-page Application) in React and I thought
               that expressing the LOVE i have for my favorite show ever. I hope

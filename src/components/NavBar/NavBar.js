@@ -17,7 +17,11 @@ const NavBar = () => {
   return (
     <div className={styles.stick}>
       <header className={styles.header}>
-        <Link to="/home" style={{ textDecoration: "none" }}>
+        <Link
+          onClick={pickedOptionHandler}
+          to="/home"
+          style={{ textDecoration: "none" }}
+        >
           <div className={styles.logo}>
             Wiki<span className={styles.who}>WHO</span>
           </div>
