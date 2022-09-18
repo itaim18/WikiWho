@@ -3,12 +3,14 @@ import styles from "./Intro.module.css";
 const Intro = (props) => {
   return (
     <>
-      <img
-        src="images/the-doctor.png"
-        alt="the doctor"
-        className={styles.sideImage}
-      />
-      <div className={styles.box}>{props.children}</div>
+      <div className={styles.box}>
+        <img
+          src="images/the-doctor.png"
+          alt="the doctor"
+          className={styles.sideImage}
+        />
+        {props.children}
+      </div>
     </>
   );
 };
