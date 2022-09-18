@@ -20,9 +20,10 @@
 .box label {
   margin: 10px 0px;
   font-weight: 700;
-  color: #f9c23c;
+  color: #daab37;
   display: inline-block;
   position: relative;
+  font-size: larger;
 }
 .box label:after {
   content: "";
@@ -51,8 +52,11 @@ textarea {
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
 }
+.form textarea {
+  height: 120px;
+  resize: none;
+}
 .form button[type="submit"] {
-  margin-left: 1rem;
   height: 2.5rem;
   padding: 0.2em 1em 0.2em 2.25em;
   font-size: 1rem;

@@ -11,20 +11,26 @@ import K9 from "../components/k9/K9";
 const Home = () => {
   return (
     <>
-      <Container>
+      <Container className={styles.container}>
         <Row>
           <Col sm={10} md={5} lg={1}>
             {" "}
             <Intro>
               <h1 className={styles.who}>DOCTOR WHO</h1>
+              <img
+                src="images/homeIcon.png"
+                alt="home"
+                className={styles.homeIcon}
+              />
               <p className={styles.text}>
                 {" "}
                 follows the adventures of a rogue Time Lord with somewhat
                 unknown origins who goes by the name "the Doctor".
-                <br /> The Doctor fled Gallifrey, the planet of the Time Lords,
-                in a stolen TARDIS ("Time and Relative Dimension in Space"), a
-                time machine that travels by materialising into, and
-                dematerialising out of, the time vortex.
+                <br />
+                The Doctor fled Gallifrey, the planet of the Time Lords, in a
+                stolen TARDIS ("Time and Relative Dimension in Space"), a time
+                machine that travels by materialising into, and dematerialising
+                out of, the time vortex.
                 <br /> The TARDIS has a vast interior but appears smaller on the
                 outside, and is equipped with a "chameleon circuit" intended to
                 make the machine take on the appearance of local objects as a
@@ -36,7 +42,7 @@ const Home = () => {
           </Col>
           <Col sm={10} md={5} lg={1}>
             {" "}
-            <Intro>
+            <Intro style={{ float: "right" }}>
               <h1
                 style={{
                   color: "#C6EBC5",

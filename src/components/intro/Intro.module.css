@@ -18,9 +18,10 @@
 .sideImage {
   width: 150px;
   height: 150px;
-  position: fixed;
+  position: absolute;
   left: -28px;
   display: block;
+  z-index: -1;
 }
 @media only screen and (max-width: 768px) {
   .sideImage {

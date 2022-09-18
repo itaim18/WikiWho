@@ -28,7 +28,13 @@ const DateEvent = () => {
 
   if (status === "completed" && !data[0]) {
     return (
-      <p style={{ color: "#2d7f9b", marginLeft: "15px" }}>
+      <p
+        style={{
+          color: "#2d7f9b",
+          marginLeft: "15px",
+          textShadow: "#000 1px 1px 0, 1px 1px 1px rgba(26,11,7,0.26)",
+        }}
+      >
         There are no special events that we saw happening today.<br></br>
         contact if you have any idea of what happened today that's related{" "}
       </p>

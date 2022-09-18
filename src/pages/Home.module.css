@@ -23,3 +23,15 @@
   display: inline;
   color: rgb(189, 151, 104);
 }
+.homeIcon {
+  position: static;
+  float: right;
+  width: 50%;
+  height: 50%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}

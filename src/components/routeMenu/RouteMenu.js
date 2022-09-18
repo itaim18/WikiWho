@@ -7,7 +7,9 @@ const RouteMenu = (props) => {
     <>
       <ul className={props.className}>
         <li>
-          <Link onClick={props.onChooseOption}>Merch</Link>
+          <Link to="/merch" onClick={props.onChooseOption}>
+            Merch
+          </Link>
         </li>
 
         <li>
@@ -47,22 +49,34 @@ const RouteMenu = (props) => {
             <BsFillCaretDownFill className={styles.icon} />
             <div className={styles.arrow}></div>
             <ul className={styles.hubsMenu}>
-              <li>Classic Era</li>
-              <li>Modern Era</li>
-              <li>Specials and Movies</li>
+              <li>
+                <Link to="/classic">Classic Era</Link>
+              </li>
+              <li>
+                <Link to="/modern">Modern Era</Link>
+              </li>
+              <li>
+                <Link to="/specials">Specials and Movies</Link>
+              </li>
             </ul>
           </Link>
 
           <div className={styles.subMenu}>
             <ul>
               <li>
-                <Link onClick={props.onChooseOption}>Classic Era</Link>
+                <Link to="/classic" onClick={props.onChooseOption}>
+                  Classic Era
+                </Link>
               </li>
               <li>
-                <Link onClick={props.onChooseOption}>Modern Era</Link>
+                <Link to="/modern" onClick={props.onChooseOption}>
+                  Modern Era
+                </Link>
               </li>
               <li>
-                <Link onClick={props.onChooseOption}>Specials and Movies</Link>
+                <Link to="/specials" onClick={props.onChooseOption}>
+                  Specials and Movies
+                </Link>
               </li>
             </ul>
           </div>

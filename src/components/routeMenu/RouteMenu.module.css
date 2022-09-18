@@ -3,6 +3,8 @@
   position: relative;
 }
 .subMenu {
+  margin: 2rem 0 0 2%;
+  text-align: center;
   display: none;
   align-items: center;
   justify-content: center;
@@ -34,7 +36,7 @@
   background: #ffffffa2;
   color: #72ffff;
   align-items: center;
-  /* border-top: 30px solid black; */
+  border-radius: 10px;
 }
 .hubsMenu li {
   display: none;
@@ -52,6 +54,9 @@ ul li:hover .subMenu {
   }
   a:hover .arrow {
     display: block;
+  }
+  .hubsMenu a {
+    color: #2d7f9b;
   }
   a:hover .hubsMenu li {
     display: block;
