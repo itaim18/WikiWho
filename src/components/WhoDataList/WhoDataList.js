@@ -9,11 +9,11 @@ const dataItems = [
 ];
 const WhoDataList = () => {
   return (
-    <ul className={styles.itemsList}>
+    <>
       {dataItems.map((item) => (
         <WhoDataItem item={item} key={item.id} />
       ))}
-    </ul>
+    </>
   );
 };
 

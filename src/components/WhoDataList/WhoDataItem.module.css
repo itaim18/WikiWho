@@ -1,9 +1,28 @@
-.item button {
+.btn {
   width: 200px;
   height: 175px;
   border-radius: 10px;
   background: url("../../assets/images/tardis.png") no-repeat scroll 0 0
     transparent;
   color: azure;
-  margin-bottom: 50px;
+  margin: 50px 50px 50px 0;
+  margin-left: 25%;
+  box-shadow: 0 25px 20px #00000065;
+}
+.item:hover .btn {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  color: red;
+}
+.item {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 770px) {
+  .item {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

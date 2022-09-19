@@ -47,3 +47,8 @@
     gap: 0;
   }
 }
+.list:after {
+  content: "";
+  display: table;
+  clear: both;
+}

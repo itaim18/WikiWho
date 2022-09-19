@@ -71,7 +71,7 @@ const Home = () => {
             <DateEvent />
           </Intro>
         </Row>
-        <Row>
+        <Row className={styles.list}>
           <WhoDataList />
         </Row>
       </Container>
