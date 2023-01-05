@@ -7,7 +7,7 @@
 - react query library functionality on the way...
 
 # [WikiWho](https://wikiwho.netlify.app/)
- <img src="https://github.com/itaim18/WikiWho/blob/master/wikiwho-logo.jpeg" alt="logo" width={100} >
+ <img src="https://github.com/itaim18/WikiWho/blob/master/wikiwho-logo.jpeg" alt="logo" width="100" >
 ## description
 Get all the information you want about the long-running british sci-fi show "Doctor Who". With info about episodes, comics, fun facts and many more on the way/site.
 
