@@ -1,0 +1,33 @@
+h1 {
+  color: rgb(255, 255, 255);
+  margin: 0 40px;
+  transition: all 0.3s ease-in-out;
+}
+h1:hover {
+  color: rgb(190, 83, 83);
+  transform: translate(5);
+}
+.merchList {
+  position: relative;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(1, auto);
+  gap: 20px;
+  z-index: 0;
+}
+
+@media only screen and (min-width: 770px) {
+  .merchList {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .merchList {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .merchList {
+    grid-template-columns: repeat(4, auto);
+  }
+}

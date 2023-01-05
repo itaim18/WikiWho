@@ -1,0 +1,17 @@
+.list {
+  padding: 0 15px;
+  margin: -20px 0px 0px -25px;
+  width: auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0px;
+}
+@media only screen and (min-width: 450px) {
+  .list {
+    margin: 20px 20px auto auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 20px;
+  }
+}

@@ -2,6 +2,7 @@
 .stick {
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  z-index: 1;
   top: 0;
 }
 .header {
@@ -22,6 +23,7 @@
   font-family: "Gotham Black", sans-serif;
   background-image: linear-gradient(60deg, #f9d104, #ffb03a);
   background-clip: text;
+
   color: transparent;
   /* color:linear-gradient( #ecb103,#f9d104 ); */
 }
@@ -36,6 +38,7 @@
 .nav li {
   margin-left: 1.5rem;
   font-size: 1.25rem;
+  color: #88dfdf;
 }
 
 .nav a {
@@ -206,6 +209,9 @@
     padding-bottom: 10px;
     height: 100vh;
     padding: 100px 0;
+  }
+  .menu li {
+    font-size: 24px;
   }
   .menuNav {
     position: -webkit-sticky; /* Safari */

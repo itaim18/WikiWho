@@ -18,7 +18,7 @@ const NotFound = () => {
         404
       </h1>
       <img
-        src="images/tardis.gif"
+        src="https://64.media.tumblr.com/47468fa55183898be9abe812418bb106/tumblr_n7jcp2Ejcl1rey868o1_500.gif"
         alt="tardis"
         className={`centered ${styles.img}`}
       />

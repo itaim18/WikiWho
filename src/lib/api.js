@@ -1,6 +1,13 @@
 const FACTS_API_DOMAIN = "https://retoolapi.dev/tpsndH/doctorwhofacts/";
 const DATES_EVENTS_DOMAIN = "https://retoolapi.dev/Lzxs0A/dates?date=";
-const date = require("../date.js");
+const WHO_MODERN_EPS =
+  "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/episodes/?api_key=c1b035464ebf8bbc44a25dff0461714a689b46de&format=json&filter=series:36&limit=100&sort=air_date:desc&field_list=name,deck,image,air_date,description,id";
+const WHO_COMICS =
+  "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/search/?api_key=c1b035464ebf8bbc44a25dff0461714a689b46de&format=json&query=Doctor%20Who&resources=issue&limit=100&field_list=id,image,name,deck,description,cover_date";
+const WHO_CLASSIC_EPS =
+  "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/episodes/?api_key=c1b035464ebf8bbc44a25dff0461714a689b46de&format=json&filter=series:15&limit=100&sort=air_date:asc&field_list=name,deck,image,air_date,description,id";
+const WHO_MERCH =
+  "https://api.rainforestapi.com/request?api_key=9F801EF1DE784B20B48CAA1DD207C159&type=search&amazon_domain=amazon.com&search_term=Doctor+Who+Merchandise";
 
 const options = {
   method: "GET",
@@ -9,7 +16,7 @@ const options = {
     "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com",
   },
 };
-
+const date = require("../date.js");
 export const getRandomFact = async () => {
   let randomPos = Math.floor(Math.random() * 33) + 1;
 
@@ -39,6 +46,45 @@ export const getRandomFact = async () => {
   };
   return fact;
 };
+export const getMerch = async () => {
+  const res = await fetch(WHO_MERCH);
+  const data_merch = await res.json();
+
+  if (!res.ok) {
+    throw new Error(data_merch.message || "Could not fetch fact.");
+  }
+  const { search_results } = data_merch;
+  console.log(search_results);
+  return search_results;
+};
+export const getComics = async () => {
+  const res = await fetch(WHO_COMICS, {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  });
+  const data = await res.json();
+  return data.results;
+};
+export const getClassicEps = async () => {
+  const res = await fetch(WHO_CLASSIC_EPS, {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  });
+  const data = await res.json();
+  return data.results;
+};
+export const getModernEps = async () => {
+  const res = await fetch(WHO_MODERN_EPS, {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  });
+  const data = await res.json();
+  return data.results;
+};
+
 const renderDate = date.getDate();
 export const getDateEvent = async () => {
   console.log(renderDate);

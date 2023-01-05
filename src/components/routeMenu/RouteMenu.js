@@ -2,79 +2,107 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import styles from "./RouteMenu.module.css";
-const RouteMenu = (props) => {
+const RouteMenu = ({ className, onChooseOption }) => {
   return (
     <>
-      <ul className={props.className}>
+      <ul className={className}>
         <li>
-          <Link to="/merch" onClick={props.onChooseOption}>
+          <Link to="/merch" onClick={onChooseOption}>
             Merch
           </Link>
         </li>
 
         <li>
-          <Link onClick={props.onChooseOption}>
+          <span className={styles.opener}>
             Hubs
             <BsFillCaretDownFill className={styles.icon} />
             <div className={styles.arrow}></div>
             <ul className={styles.hubsMenu}>
               <li>
-                <Link to="/fun-fact">Fun Fact</Link>
-              </li>
-              <li>Comics</li>
-              <li>Comic Relief</li>
-            </ul>
-          </Link>
-
-          <div className={styles.subMenu}>
-            <ul>
-              <li>
-                <Link to="/fun-fact" onClick={props.onChooseOption}>
+                <Link
+                  to="/fun-fact"
+                  onClick={onChooseOption}
+                  className={styles.funFact}
+                >
                   Fun Fact
                 </Link>
               </li>
               <li>
-                <Link onClick={props.onChooseOption}>Comics</Link>
+                <Link to="/comics" onClick={onChooseOption}>
+                  Comics
+                </Link>
               </li>
               <li>
-                <Link onClick={props.onChooseOption}>Comic Relief</Link>
+                <Link to="/comic-relief" onClick={onChooseOption}>
+                  Comic Relief
+                </Link>
+              </li>
+            </ul>
+          </span>
+
+          <div className={styles.subMenu}>
+            <ul>
+              <li>
+                <Link
+                  to="/fun-fact"
+                  onClick={onChooseOption}
+                  className={styles.funFact}
+                >
+                  Fun Fact
+                </Link>
+              </li>
+              <li>
+                <Link to="/comics" onClick={onChooseOption}>
+                  Comics
+                </Link>
+              </li>
+              <li>
+                <Link to="/comic-relief" onClick={onChooseOption}>
+                  Comic Relief
+                </Link>
               </li>
             </ul>
           </div>
         </li>
 
         <li>
-          <Link onClick={props.onChooseOption}>
+          <span className={styles.opener}>
             Episodes
             <BsFillCaretDownFill className={styles.icon} />
             <div className={styles.arrow}></div>
             <ul className={styles.hubsMenu}>
               <li>
-                <Link to="/classic">Classic Era</Link>
-              </li>
-              <li>
-                <Link to="/modern">Modern Era</Link>
-              </li>
-              <li>
-                <Link to="/specials">Specials and Movies</Link>
-              </li>
-            </ul>
-          </Link>
-
-          <div className={styles.subMenu}>
-            <ul>
-              <li>
-                <Link to="/classic" onClick={props.onChooseOption}>
+                <Link to="/classic" onClick={onChooseOption}>
                   Classic Era
                 </Link>
               </li>
               <li>
-                <Link to="/modern" onClick={props.onChooseOption}>
+                <Link to="/modern" onClick={onChooseOption}>
                   Modern Era
                 </Link>
               </li>
               <li>
-                <Link to="/specials" onClick={props.onChooseOption}>
+                <Link to="/specials" onClick={onChooseOption}>
+                  Specials and Movies
+                </Link>
+              </li>
+            </ul>
+          </span>
+
+          <div className={styles.subMenu}>
+            <ul>
+              <li>
+                <Link to="/classic" onClick={onChooseOption}>
+                  Classic Era
+                </Link>
+              </li>
+              <li>
+                <Link to="/modern" onClick={onChooseOption}>
+                  Modern Era
+                </Link>
+              </li>
+              <li>
+                <Link to="/specials" onClick={onChooseOption}>
                   Specials and Movies
                 </Link>
               </li>
@@ -83,7 +111,7 @@ const RouteMenu = (props) => {
         </li>
 
         <li>
-          <Link to="/contact" onClick={props.onChooseOption}>
+          <Link to="/contact" onClick={onChooseOption}>
             CONTACT
           </Link>
         </li>

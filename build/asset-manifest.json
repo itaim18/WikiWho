@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.600a57b4.chunk.css",
+    "main.js": "/static/js/main.7d44032c.chunk.js",
+    "main.js.map": "/static/js/main.7d44032c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.dbcfb07f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.dbcfb07f.js.map",
+    "static/js/2.a162c0c5.chunk.js": "/static/js/2.a162c0c5.chunk.js",
+    "static/js/2.a162c0c5.chunk.js.map": "/static/js/2.a162c0c5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.600a57b4.chunk.css.map": "/static/css/main.600a57b4.chunk.css.map",
+    "static/js/2.a162c0c5.chunk.js.LICENSE.txt": "/static/js/2.a162c0c5.chunk.js.LICENSE.txt",
+    "static/media/WhoDataItem.module.css": "/static/media/tardis.544698e7.png",
+    "static/media/yes.ef896663.mpeg": "/static/media/yes.ef896663.mpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dbcfb07f.js",
+    "static/js/2.a162c0c5.chunk.js",
+    "static/css/main.600a57b4.chunk.css",
+    "static/js/main.7d44032c.chunk.js"
+  ]
+}

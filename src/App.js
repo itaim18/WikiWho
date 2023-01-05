@@ -8,7 +8,8 @@ import ModernEra from "./pages/ModernEra";
 import { Route, Switch, Redirect } from "react-router-dom";
 import ClassicEra from "./pages/ClassicEra";
 import Specials from "./pages/Specials";
-
+import ComicRelief from "./pages/ComicRelief";
+import Comics from "./pages/Comics";
 function App() {
   return (
     <>
@@ -22,6 +23,12 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/comic-relief">
+          <ComicRelief />
+        </Route>
+        <Route path="/comics">
+          <Comics />
         </Route>
         <Route path="/fun-fact">
           <FunFact />
@@ -41,15 +48,7 @@ function App() {
         <Route path="/*">
           <NotFound />
         </Route>
-      </Switch>{" "}
-      <canvas
-        style={{
-          position: "fixed",
-          width: "100%",
-          height: "100%",
-          zIndex: -1,
-        }}
-      ></canvas>
+      </Switch>
     </>
   );
 }

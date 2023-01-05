@@ -5,7 +5,6 @@ import WhoDataList from "../components/WhoDataList/WhoDataList";
 import styles from "./Home.module.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import K9 from "../components/k9/K9";
 
 const Home = () => {
@@ -43,14 +42,14 @@ const Home = () => {
                 style={{
                   color: "#2d7f9b",
                   marginLeft: "15px",
-                  textShadow: "#000 1px 1px 0, 1px 1px 1px rgba(26,11,7,0.26)",
                 }}
               >
                 I made several fullstack and frontend Projects and I wanted to
-                make my first MPA(Multi-page Application) in React and I thought
-                that expressing the LOVE i have for my favorite show ever. I
-                hope you'll find here what you looked for or at least learned
-                something new. Please contact for any suggestions or reviews...
+                make my first MPA (Multi-page Application) in React and I
+                realized I should express the ❤️ I have for my favorite TV show
+                ever. I hope you'll find here what you looked for or at least
+                learned something new. Please contact for any suggestions or
+                feedback...
               </h3>{" "}
             </Intro>
           </div>

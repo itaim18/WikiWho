@@ -5,23 +5,22 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const pickedOptionHandler = () => {
-    setShowMenu(false);
-  };
+  // const pickedOptionHandler = () => {
+  //   setShowMenu(true);
+  // };
   const showMenuHandler = () => {
     setShowMenu((prevState) => {
       return !prevState;
     });
   };
+  const backHome = () => {
+    setShowMenu(false);
+  };
 
   return (
     <div className={styles.stick}>
       <header className={styles.header}>
-        <Link
-          onClick={pickedOptionHandler}
-          to="/home"
-          style={{ textDecoration: "none" }}
-        >
+        <Link onClick={backHome} to="/home" style={{ textDecoration: "none" }}>
           <div className={styles.logo}>
             Wiki<span className={styles.who}>WHO</span>
           </div>
@@ -41,10 +40,7 @@ const NavBar = () => {
 
       {showMenu && (
         <nav className={styles.menuNav}>
-          <RouteMenu
-            className={styles.menu}
-            onChooseOption={pickedOptionHandler}
-          />
+          <RouteMenu className={styles.menu} onChooseOption={backHome} />
         </nav>
       )}
     </div>

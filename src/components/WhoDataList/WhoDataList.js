@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./WhoDataList.module.css";
 import WhoDataItem from "./WhoDataItem";
 const dataItems = [
   { id: "d1", name: "doctor 1" },

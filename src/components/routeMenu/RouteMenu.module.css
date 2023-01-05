@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 .icon {
   top: 5px;
   position: relative;
@@ -16,9 +17,31 @@
   right: 2.5%;
   position: relative;
 }
-.subMenu a {
-  font-size: larger;
+.funFact {
+  font: italic 24px "Ubuntu", sans-serif;
+  background-image: radial-gradient(
+    circle,
+    #b720b7,
+    #6477fb,
+    #00a9ff,
+    #00ceff,
+    #12ebeb
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
 }
+.funFact:hover {
+  background-image: radial-gradient(
+    circle,
+    #12ebeb,
+    #00ceff,
+    #00a9ff,
+    #6477fb,
+    #b720b7
+  );
+}
+
 .arrow {
   width: 0;
   height: 0;
@@ -33,10 +56,10 @@
   position: absolute;
   top: 70px;
   flex-direction: column;
-  background: #ffffffa2;
-  color: #72ffff;
+  background: rgba(0, 0, 0, 0.6);
+  color: #2ad6d6;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 .hubsMenu li {
   display: none;
@@ -69,7 +92,17 @@ ul li:hover .subMenu {
     display: block;
     color: #00ffffa2;
   }
+  .opener {
+    padding: 25px 0;
+  }
+  .opener:hover {
+    color: #e6fcfc;
+  }
+  .opener:hover .hubsMenu li {
+    display: block;
+  }
+  li ul:hover .hubsMenu li {
+    display: block;
+    color: #00ffffa2;
+  }
 }
-/* a:hover +  .subMenu{
-display: block;
-} */

@@ -43,6 +43,7 @@
 }
 .form input,
 textarea {
+  position: relative;
   width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -52,6 +53,7 @@ textarea {
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
 }
+
 .form textarea {
   height: 120px;
   resize: none;
