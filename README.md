@@ -7,11 +7,11 @@
 - react query library functionality on the way...
 
 # [WikiWho](https://wikiwho.netlify.app/)
-![] (https://github.com/itaim18/WikiWho/blob/master/wikiwho-logo.jpeg)
+![](https://github.com/itaim18/WikiWho/blob/master/wikiwho-logo.jpeg)
 ## description
 Get all the information you want about the long-running british sci-fi show "Doctor Who". With info about episodes, comics, fun facts and many more on the way/site.
 
-![] (https://github.com/itaim18/WikiWho/blob/master/WikiWho-app.jpeg)
+![](https://github.com/itaim18/WikiWho/blob/master/WikiWho-app.jpeg)
 > "Wibbly-Wobbly, Timey-Wimey... Stuff." 
 > ,10th doctor
 
