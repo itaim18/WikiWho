@@ -2,8 +2,7 @@
 - fetches data from several different REST apis.
 - building custom hooks to load data and maintain the fetching itself.
 - custom UI/UX created personally by CSS files and inline style objects.
-- Interactive side anomations.
-- Ui styled components such as modal side animation etc.
+- Ui styled components such as modal, side animation etc.
 - react query library functionality on the way...
 
 # [WikiWho](https://wikiwho.netlify.app/)
@@ -34,7 +33,7 @@ Get all the information you want about the long-running british sci-fi show "Doc
 
 ### Manual use:
 enter the [site](https://wikiwho.netlify.app/home). Go through the navbar to look for the information you're looking for.
-####other options: 
+#### other options: 
 - look for DW merchendise in the merch link.
 - see a fun fact by clicking the fun fact link.
 - contact me in the contact link.
