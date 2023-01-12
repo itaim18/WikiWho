@@ -33,8 +33,8 @@ const RouteMenu = ({ className, onChooseOption }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/comic-relief" onClick={onChooseOption}>
-                  Comic Relief
+                <Link to="/issues" onClick={onChooseOption}>
+                  Issues
                 </Link>
               </li>
             </ul>
@@ -57,8 +57,8 @@ const RouteMenu = ({ className, onChooseOption }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/comic-relief" onClick={onChooseOption}>
-                  Comic Relief
+                <Link to="/issues" onClick={onChooseOption}>
+                  Issues
                 </Link>
               </li>
             </ul>
@@ -83,7 +83,7 @@ const RouteMenu = ({ className, onChooseOption }) => {
               </li>
               <li>
                 <Link to="/specials" onClick={onChooseOption}>
-                  Specials and Movies
+                  Specials
                 </Link>
               </li>
             </ul>
@@ -103,7 +103,7 @@ const RouteMenu = ({ className, onChooseOption }) => {
               </li>
               <li>
                 <Link to="/specials" onClick={onChooseOption}>
-                  Specials and Movies
+                  Specials
                 </Link>
               </li>
             </ul>

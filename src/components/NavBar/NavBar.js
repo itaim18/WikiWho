@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  // const pickedOptionHandler = () => {
-  //   setShowMenu(true);
-  // };
+
   const showMenuHandler = () => {
     setShowMenu((prevState) => {
       return !prevState;

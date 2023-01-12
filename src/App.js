@@ -8,7 +8,7 @@ import ModernEra from "./pages/ModernEra";
 import { Route, Switch, Redirect } from "react-router-dom";
 import ClassicEra from "./pages/ClassicEra";
 import Specials from "./pages/Specials";
-import ComicRelief from "./pages/ComicRelief";
+import Issues from "./pages/Issues";
 import Comics from "./pages/Comics";
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route path="/comic-relief">
-          <ComicRelief />
+        <Route path="/issues">
+          <Issues />
         </Route>
         <Route path="/comics">
           <Comics />

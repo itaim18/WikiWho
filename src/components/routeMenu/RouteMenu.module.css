@@ -80,6 +80,7 @@ ul li:hover .subMenu {
   }
   .hubsMenu a {
     color: #2d7f9b;
+    padding: 20px;
   }
   a:hover .hubsMenu li {
     display: block;

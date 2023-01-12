@@ -1,7 +1,6 @@
 import React from "react";
 import Intro from "../components/intro/Intro";
 import DateEvent from "../components/dateEvent/DateEvent";
-import WhoDataList from "../components/WhoDataList/WhoDataList";
 import styles from "./Home.module.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -69,9 +68,6 @@ const Home = () => {
             </h1>
             <DateEvent />
           </Intro>
-        </Row>
-        <Row className={styles.list}>
-          <WhoDataList />
         </Row>
       </Container>
       <K9 />

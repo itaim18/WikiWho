@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./item.module.css";
 import { FaPlay } from "react-icons/fa";
 import { HiSortDescending } from "react-icons/hi";
-import { MdCloseFullscreen } from "react-icons/md";
 const Item = ({ hoverWidth, itemData, itemSize, itemWidth }) => {
   const [showDesc, setShowDesc] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
@@ -10,18 +9,21 @@ const Item = ({ hoverWidth, itemData, itemSize, itemWidth }) => {
     <>
       <li style={itemWidth} key={itemData.id} className={styles.item}>
         <div style={itemWidth} className={styles.itemImg}>
-          <img style={itemSize} src={itemData.image.medium_url} alt="img" />
+          <img style={itemSize} src={itemData.image.mediumUrl} alt="img" />
           <div style={hoverWidth} className={styles.hoverCard}>
             <FaPlay
               className={styles.playIcon}
               onClick={() => setShowVideo((prevState) => !prevState)}
             />
             <div>
-              {itemData.cover_date && <p>{itemData.cover_date}</p>}
-              {itemData.air_date && <p>{itemData.air_date}</p>}
+              {itemData.airDate ? (
+                <p>{itemData.airDate}</p>
+              ) : (
+                <p>{itemData.dateAdded.slice(0, 10)}</p>
+              )}
 
               <span onClick={() => setShowDesc((prevState) => !prevState)}>
-                <span> Desc: </span>{" "}
+                <span style={{ cursor: "pointer" }}> Desc: </span>{" "}
                 <HiSortDescending className={styles.icon} />
               </span>
             </div>
@@ -48,23 +50,12 @@ const Item = ({ hoverWidth, itemData, itemSize, itemWidth }) => {
           className={styles.info}
           onClick={() => setShowVideo((prevState) => !prevState)}
         >
-          {/* <MdCloseFullscreen
-            style={{
-              color: "white",
-              position: "absolute",
-              top: "50px",
-              right: "200px",
-              fontSize: "32px",
-            }}
-          /> */}
           <iframe
             title="doctor"
             style={{ position: "relative", top: "160px" }}
             src="https://www.youtube-nocookie.com/embed/wXrqtC81ztA"
             height="562px"
             width="1024px"
-            // scrolling="no"
-            // frameBorder=""
             allowFullScreen
           ></iframe>
         </section>
