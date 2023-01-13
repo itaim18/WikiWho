@@ -23,7 +23,7 @@ export const getRandomFact = async () => {
   const data2 = await response2.json();
 
   const img = data2.value[randomPos].contentUrl;
-  console.log(img);
+
   let randomId = Math.floor(Math.random() * 53) + 1;
   const response = await fetch(FACTS_API_DOMAIN + randomId);
   const data = await response.json();
@@ -50,36 +50,40 @@ export const getMerch = async () => {
     throw new Error(data_merch.message || "Could not fetch fact.");
   }
   const { search_results } = data_merch;
-  console.log(search_results);
+
   return search_results;
 };
 export const getComics = async () => {
   const res = await fetch("https://cors-app.onrender.com/comics");
   const data = await res.json();
 
-  return data.data;
+  return data;
 };
 export const getIssues = async () => {
   const res = await fetch("https://cors-app.onrender.com/issues");
   const data = await res.json();
-  return data.data;
+  return data;
 };
 export const getClassicEps = async () => {
   const res = await fetch("https://cors-app.onrender.com/classic");
   const data = await res.json();
 
-  return data.data;
+  return data;
 };
 export const getModernEps = async () => {
   const res = await fetch("https://cors-app.onrender.com/modern");
   const data = await res.json();
 
-  return data.data;
+  return data;
 };
+export const getSpecials = async () => {
+  const res = await fetch("https://cors-app.onrender.com/specials");
+  const data = await res.json();
 
+  return data;
+};
 const renderDate = date.getDate();
 export const getDateEvent = async () => {
-  console.log(renderDate);
   const dateResponse = await fetch(DATES_EVENTS_DOMAIN + renderDate);
   const data = await dateResponse.json();
   if (!dateResponse.ok) {
