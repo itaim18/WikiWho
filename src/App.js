@@ -10,45 +10,51 @@ import ClassicEra from "./pages/ClassicEra";
 import Specials from "./pages/Specials";
 import Issues from "./pages/Issues";
 import Comics from "./pages/Comics";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+const queryClient = new QueryClient();
 function App() {
   return (
     <>
       <NavBar />
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/home" />
-        </Route>
-        <Route path="/home" exact>
-          <Home />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/issues">
-          <Issues />
-        </Route>
-        <Route path="/comics">
-          <Comics />
-        </Route>
-        <Route path="/fun-fact">
-          <FunFact />
-        </Route>
-        <Route path="/merch">
-          <Merch />
-        </Route>
-        <Route path="/classic">
-          <ClassicEra />
-        </Route>
-        <Route path="/modern">
-          <ModernEra />
-        </Route>
-        <Route path="/specials">
-          <Specials />
-        </Route>
-        <Route path="/*">
-          <NotFound />
-        </Route>
-      </Switch>
+      <QueryClientProvider client={queryClient}>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/home" exact>
+            <Home />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/issues">
+            <Issues />
+          </Route>
+          <Route path="/comics">
+            <Comics />
+          </Route>
+          <Route path="/fun-fact">
+            <FunFact />
+          </Route>
+          <Route path="/merch">
+            <Merch />
+          </Route>
+          <Route path="/classic">
+            <ClassicEra />
+          </Route>
+          <Route path="/modern">
+            <ModernEra />
+          </Route>
+          <Route path="/specials">
+            <Specials />
+          </Route>
+          <Route path="/*">
+            <NotFound />
+          </Route>
+        </Switch>
+        <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+      </QueryClientProvider>
     </>
   );
 }

@@ -3,7 +3,9 @@
 * {
   box-sizing: border-box;
 }
-
+*::selection {
+  background-color: rgb(17, 159, 253);
+}
 html {
   font-family: "Roboto Mono", monospace;
 }

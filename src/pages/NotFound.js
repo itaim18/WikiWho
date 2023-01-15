@@ -9,7 +9,7 @@ const NotFound = () => {
         color: "#72ffff",
         background: "#303040",
         width: "70%",
-        borderRadius: "5%",
+        borderRadius: "20px",
         boxShadow:
           "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
       }}
@@ -20,6 +20,7 @@ const NotFound = () => {
       <img
         src="https://64.media.tumblr.com/47468fa55183898be9abe812418bb106/tumblr_n7jcp2Ejcl1rey868o1_500.gif"
         alt="tardis"
+        style={{ margin: "auto auto" }}
         className={`centered ${styles.img}`}
       />
       <h3 className="centered">Page not found</h3>

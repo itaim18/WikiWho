@@ -42,6 +42,12 @@ export const getRandomFact = async () => {
   };
   return fact;
 };
+const fetchData = async (url) => {
+  const res = await fetch(url);
+  const data = await res.json();
+
+  return data;
+};
 export const getMerch = async () => {
   const res = await fetch(WHO_MERCH);
   const data_merch = await res.json();
@@ -54,32 +60,23 @@ export const getMerch = async () => {
   return search_results;
 };
 export const getComics = async () => {
-  const res = await fetch("https://cors-app.onrender.com/comics");
-  const data = await res.json();
-
+  const data = fetchData("https://cors-app.onrender.com/comics");
   return data;
 };
 export const getIssues = async () => {
-  const res = await fetch("https://cors-app.onrender.com/issues");
-  const data = await res.json();
+  const data = fetchData("https://cors-app.onrender.com/issues");
   return data;
 };
 export const getClassicEps = async () => {
-  const res = await fetch("https://cors-app.onrender.com/classic");
-  const data = await res.json();
-
+  const data = fetchData("https://cors-app.onrender.com/classic/1");
   return data;
 };
 export const getModernEps = async () => {
-  const res = await fetch("https://cors-app.onrender.com/modern");
-  const data = await res.json();
-
+  const data = fetchData("https://cors-app.onrender.com/modern");
   return data;
 };
 export const getSpecials = async () => {
-  const res = await fetch("https://cors-app.onrender.com/specials");
-  const data = await res.json();
-
+  const data = fetchData("https://cors-app.onrender.com/specials");
   return data;
 };
 const renderDate = date.getDate();
