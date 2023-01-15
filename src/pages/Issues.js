@@ -1,11 +1,39 @@
 import React, { useEffect } from "react";
 import ItemsList from "../components/itemsList/ItemsList";
-import useHttp from "../hooks/useHttp";
-import { getIssues } from "../lib/api";
+import { useInfiniteQuery } from "react-query";
 import LoadingIcon from "../components/UI/LoadingIcon";
 import K9 from "../components/k9/K9";
 const Issues = () => {
-  const { sendRequest, status, data: issues, error } = useHttp(getIssues, true);
+  const fetchClassic = async ({ pageParam = 1 }) => {
+    const response = await fetch(
+      `https://cors-app.onrender.com/issues/${pageParam}`
+    );
+    const data = await response.json();
+    return data;
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const {
+    isLoading,
+    data,
+    isError,
+    error,
+    isFetchingNextPage,
+    hasNextPage,
+    isFetching,
+    fetchNextPage,
+  } = useInfiniteQuery(["issues"], fetchClassic, {
+    getNextPageParam: (_lastPage, pages) => {
+      if (pages.length < 3) {
+        return pages.length + 1;
+      } else {
+        return undefined;
+      }
+    },
+  });
+
   var comicWidth = { width: "240px" };
   var comicsGrid = {
     gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
@@ -22,11 +50,8 @@ const Issues = () => {
     hoverWidth = { width: "89%" };
   }
   const comicSize = { width: "238px", height: "360px" };
-  useEffect(() => {
-    sendRequest();
-  }, [sendRequest]);
 
-  if (status === "pending") {
+  if (isLoading) {
     return (
       <div className="centered">
         <LoadingIcon />
@@ -34,28 +59,29 @@ const Issues = () => {
       </div>
     );
   }
-  if (error) {
-    return (
-      <>
-        <p>{error}</p>
-        <K9 />
-      </>
-    );
+  if (isError) {
+    return <h1>{error.message}</h1>;
+  }
+  if (hasNextPage) {
+    fetchNextPage();
   }
 
-  if (status === "completed" && !issues) {
-    return <p>error rendering list</p>;
-  }
   return (
     <>
       <h1>Issues:</h1>
-      <ItemsList
-        hoverWidth={hoverWidth}
-        results={issues}
-        itemSize={comicSize}
-        itemWidth={comicWidth}
-        comicsGrid={comicsGrid}
-      />
+      {data.pages.map((page, idx) => {
+        return (
+          <ItemsList
+            hoverWidth={hoverWidth}
+            itemSize={comicSize}
+            itemWidth={comicWidth}
+            comicsGrid={comicsGrid}
+            results={page}
+            key={idx}
+          />
+        );
+      })}
+      <div>{isFetching && isFetchingNextPage ? <LoadingIcon /> : null}</div>
     </>
   );
 };

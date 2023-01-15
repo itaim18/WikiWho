@@ -56,14 +56,26 @@
   position: absolute;
   top: 70px;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.6);
-  color: #2ad6d6;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(10px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
   align-items: center;
   border-radius: 7px;
 }
 .hubsMenu li {
+  font-weight: 700;
   display: none;
   margin: 20px 5px;
+}
+.hubsMenu li a {
+  color: #ffffff;
+}
+.hubsMenu li a:hover {
+  color: #a3a3a3;
 }
 a:hover {
   color: #69e9e9a2;

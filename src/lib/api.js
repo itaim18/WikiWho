@@ -67,14 +67,7 @@ export const getIssues = async () => {
   const data = fetchData("https://cors-app.onrender.com/issues");
   return data;
 };
-export const getClassicEps = async () => {
-  const data = fetchData("https://cors-app.onrender.com/classic/1");
-  return data;
-};
-export const getModernEps = async () => {
-  const data = fetchData("https://cors-app.onrender.com/modern");
-  return data;
-};
+
 export const getSpecials = async () => {
   const data = fetchData("https://cors-app.onrender.com/specials");
   return data;
