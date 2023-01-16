@@ -17,6 +17,7 @@ Get all the information you want about the long-running british sci-fi show "Doc
 ## 🔧 Technologies
 - React
 - Js
+- React Query  ![](https://github.com/itaim18/WikiWho/blob/master/RQ.svg)
 - CSS
 - Media queries(responsiveness)
 ## 📃 Instructions
