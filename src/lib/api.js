@@ -3,12 +3,14 @@ require("dotenv").config();
 const FACTS_API_DOMAIN = "https://retoolapi.dev/tpsndH/doctorwhofacts/";
 const DATES_EVENTS_DOMAIN = "https://retoolapi.dev/Lzxs0A/dates?date=";
 const WHO_MERCH =
-  "https://api.rainforestapi.com/request?api_key=9F801EF1DE784B20B48CAA1DD207C159&type=search&amazon_domain=amazon.com&search_term=Doctor+Who+Merchandise";
+  "https://api.rainforestapi.com/request?api_key=" +
+  process.env.REACT_APP_AMAZON_API_KEY +
+  "&type=search&amazon_domain=amazon.com&search_term=Doctor+Who+Merchandise";
 
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "5d5c7b1ac4mshb4312c68edd1af7p102104jsn812147ae910d",
+    "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
     "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com",
   },
 };
@@ -42,12 +44,7 @@ export const getRandomFact = async () => {
   };
   return fact;
 };
-const fetchData = async (url) => {
-  const res = await fetch(url);
-  const data = await res.json();
 
-  return data;
-};
 export const getMerch = async () => {
   const res = await fetch(WHO_MERCH);
   const data_merch = await res.json();
@@ -59,19 +56,7 @@ export const getMerch = async () => {
 
   return search_results;
 };
-export const getComics = async () => {
-  const data = fetchData("https://cors-app.onrender.com/comics");
-  return data;
-};
-export const getIssues = async () => {
-  const data = fetchData("https://cors-app.onrender.com/issues");
-  return data;
-};
 
-export const getSpecials = async () => {
-  const data = fetchData("https://cors-app.onrender.com/specials");
-  return data;
-};
 const renderDate = date.getDate();
 export const getDateEvent = async () => {
   const dateResponse = await fetch(DATES_EVENTS_DOMAIN + renderDate);

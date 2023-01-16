@@ -1,0 +1,26 @@
+.movie {
+  font-family: "Ubuntu";
+  border: solid lightblue;
+  width: 70%;
+  margin: 30px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.movie h1 {
+  font-size: 42px;
+}
+.movie h2 {
+  text-decoration: underline;
+  font-size: 20px;
+  margin: 10px 40px;
+  color: brown;
+}
+.movie div {
+  text-align: justify;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.movie div a {
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
