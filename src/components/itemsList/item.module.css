@@ -26,7 +26,6 @@
 .itemImg:hover {
   filter: drop-shadow(0 0 2em rgba(255, 255, 255, 0.6));
   transform: scale(1.05);
-  transform-origin: center bottom;
 }
 .itemImg:hover img {
   transform: scale(1.1);

@@ -52,7 +52,7 @@ const Comics = () => {
       transform: "scale(.8)",
       margin: "-20px -20px",
     };
-    hoverWidth = { width: "89%" };
+    hoverWidth = { width: "100%", left: "0%" };
   }
   const comicSize = { width: "240px", height: "360px" };
 
