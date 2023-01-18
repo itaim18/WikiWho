@@ -138,7 +138,10 @@
     padding: 0px 0px;
     width: 340px;
     margin: -20px -20px;
-    transform: scale(0.7);
+    transform: scale(0.8);
+  }
+  .item h3 {
+    margin-top: 0px;
   }
   .item img {
     margin: auto 0px;

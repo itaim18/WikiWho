@@ -40,17 +40,21 @@ const Issues = () => {
   };
   var hoverWidth = { width: "100%" };
   function detectMob() {
-    return window.innerWidth <= 450 && window.innerHeight <= 800;
+    return window.innerWidth <= 450;
   }
   if (detectMob()) {
     comicsGrid = {
       gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+      padding: "0px",
     };
-    comicWidth = { width: "300px" };
+    comicWidth = {
+      width: "240px",
+      transform: "scale(.8)",
+      margin: "-20px -20px",
+    };
     hoverWidth = { width: "89%" };
   }
-  const comicSize = { width: "238px", height: "360px" };
-
+  const comicSize = { width: "240px", height: "360px" };
   if (isLoading) {
     return (
       <div className="centered">

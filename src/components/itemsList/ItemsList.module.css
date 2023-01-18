@@ -1,7 +1,7 @@
 .list {
   padding: 0 15px;
-  margin: -20px 0px 0px -25px;
-  width: auto;
+  margin: auto;
+  width: 90%;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
